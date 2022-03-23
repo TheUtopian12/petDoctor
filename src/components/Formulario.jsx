@@ -1,10 +1,14 @@
+import { useState, useEffect } from "react";
 export const Formulario = () => {
+
+const [nombre, setNombre] = useState('Hook')
+
   return (
     <div className="md:w-1/2 lg:w-2/5">
       <h2 className="fotn-black text-3xl text-center">Seguimiento Pacientes</h2>
       <p className="text-lg mt-5 text-center mb-10">
         Anade pacientes y {""}
-        <span className="text-indigo-600 font-bold ">Administralos</span>
+        <span className="text-indigo-600 font-bold ">Administralos</span>  </p>
         <form action="" className="bg-white shadow-md rounded-lg py-10 px-5">
           <div className="mb-5">
             <label
@@ -84,7 +88,7 @@ export const Formulario = () => {
             value="Agregar Paciente"
           />
         </form>
-      </p>
+    
     </div>
   );
 };
