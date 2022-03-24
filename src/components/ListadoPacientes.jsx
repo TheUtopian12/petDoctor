@@ -1,6 +1,10 @@
 import { Pacientes } from "./Pacientes";
 
-export const ListadoPacientes = ({ pacientes }) => {
+export const ListadoPacientes = ({
+  pacientes,
+  setPaciente,
+  eliminarPaciente,
+}) => {
   console.log(pacientes.length === 0);
   return (
     <>
@@ -18,7 +22,14 @@ export const ListadoPacientes = ({ pacientes }) => {
               </span>
             </p>
             {pacientes.map((paciente) => {
-              return <Pacientes key={paciente.id} paciente={paciente} />;
+              return (
+                <Pacientes
+                  key={paciente.id}
+                  paciente={paciente}
+                  setPaciente={setPaciente}
+                  eliminarPaciente={eliminarPaciente}
+                />
+              );
             })}
           </>
         ) : (
